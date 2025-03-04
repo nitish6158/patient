@@ -20,7 +20,6 @@ import CongratulationScreen from '../CongratulationScreen/Congratulation';
 import AuthStore from '../../zustand/store/AuthStore';
 import LanguageSelected from '../../utils/LanguageSelected';
 const SignIn: React.FC<LoginInterface> = props => {
-  
   const { language } = AuthStore();
   const languageKey = language as keyof typeof LanguageSelected.Medicine;
 
