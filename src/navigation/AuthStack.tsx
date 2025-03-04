@@ -7,12 +7,14 @@ import Login from '../screens/Login/Login';
 import Signup from '../screens/SignUp/Signup';
 import MobileVerification from '../screens/OtpVerification/MobileVerification';
 import ForgotPassword from '../screens/ForgotPassword/ForgotPassword';
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import Language from '../screens/Language/Language';
 const Stack = createStackNavigator();
 
 const AuthStack: React.FC = () => {
   return (
     <Stack.Navigator>
+  
       <Stack.Screen
         name="FirstScreen"
         component={FirstScreen}
@@ -39,6 +41,11 @@ const AuthStack: React.FC = () => {
         component={Login}
         options={{headerShown: false}}
       />
+       <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPassword}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="Signup"
         component={Signup}
@@ -47,6 +54,11 @@ const AuthStack: React.FC = () => {
       <Stack.Screen
         name="MobileVerification"
         component={MobileVerification}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
