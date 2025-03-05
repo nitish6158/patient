@@ -5,6 +5,9 @@ import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 
+import android.os.Bundle;
+import org.devio.rn.splashscreen.SplashScreen;
+
 class MainActivity : ReactActivity() {
 
   /**
@@ -13,6 +16,11 @@ class MainActivity : ReactActivity() {
    */
   override fun getMainComponentName(): String = "Dr"
 
+  override fun onCreate(savedInstanceState: Bundle?) {
+        SplashScreen.show(this)
+        super.onCreate(savedInstanceState)
+    }
+    
   /**
    * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]
    * which allows you to enable New Architecture with a single boolean flags [fabricEnabled]
