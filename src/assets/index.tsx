@@ -12,6 +12,7 @@ export const IMAGES = {
     language: require('../assets/images/language.png'),
     Arabic: require('../assets/images/Arabic.png'),
     French: require('../assets/images/French.png'),
+    backGround: require('../assets/images/backGround.png'),
     En: require('../assets/images/En.jpg'),
    
      /*...icon......*/
@@ -33,5 +34,12 @@ export const IMAGES = {
      unfocusedcalendar: require('../assets/icon/unfocusedcalendar.png'),
      greyArrow: require('../assets/icon/greyArrow.png'),
      blueArrow: require('../assets/icon/blueArrow.png'),
-     message: require('../assets/icon/image51.png'),
+     message: require('../assets/icon/blueArrow.png'),
+     whitebackArrow: require('../assets/icon/whitebackArrow.png'),
+     filterIcon: require('../assets/icon/filter.png'),
+     searchIcon: require('../assets/icon/search.png'),
+     doctorIcon: require('../assets/icon/doctorIcon.png'),
+     specializationIcon: require('../assets/icon/specializationIcon.png'),
+     clinicIcon: require('../assets/icon/clinicIcon.png'),
+     StarIcon: require('../assets/icon/Star.png'),
 }  

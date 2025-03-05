@@ -31,7 +31,7 @@ const SignIn: React.FC<LoginInterface> = props => {
   const handleSignIn = () => {
     // Handle sign in logic here
     // setShow(true);
-    props.navigation.navigate('MyAppointment');
+    props.navigation.navigate('SearchDoctor');
 
   };
 
