@@ -7,8 +7,6 @@ const LoginStyle = () => {
     container: {
       flex: 1,
 
-      // alignItems: 'center',
-      // backgroundColor: '#fff',
     },
     Medicine: {
       fontSize: fontScale(30),
