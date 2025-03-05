@@ -1,3 +1,5 @@
+import MyAppointment from '../screens/MyAppointment/MyAppointment';
+
 const LanguageSelected = {
   // Login screen text
   login: {
@@ -35,26 +37,26 @@ const LanguageSelected = {
     AR: 'استشارة الطبيب',
     FN: 'Consultation médicale',
   },
-   // Signin screen text
-   newToMedicineApp: {
+  // Signin screen text
+  newToMedicineApp: {
     EN: 'New to Medicine App?',
     AR: 'جديد في تطبيق الطب؟',
-    FN: 'Nouveau sur l\'application Medicine?',
+    FN: "Nouveau sur l'application Medicine?",
   },
   register: {
     EN: 'Register',
     AR: 'تسجيل',
-    FN: 'S\'inscrire',
+    FN: "S'inscrire",
   },
   userName: {
     EN: 'User Name *',
     AR: 'اسم المستخدم *',
-    FN: 'Nom d\'utilisateur *',
+    FN: "Nom d'utilisateur *",
   },
   enterUserName: {
     EN: 'Enter Username',
     AR: 'أدخل اسم المستخدم',
-    FN: 'Entrez le nom d\'utilisateur',
+    FN: "Entrez le nom d'utilisateur",
   },
   password: {
     EN: 'Password *',
@@ -76,7 +78,7 @@ const LanguageSelected = {
     AR: 'تم تسجيل الدخول بنجاح',
     FN: 'Connexion réussie',
   },
-  // Signup screen 
+  // Signup screen
   alreadyHaveAnAccount: {
     EN: 'Already Have An Account?',
     AR: 'هل لديك حساب؟',
@@ -90,11 +92,11 @@ const LanguageSelected = {
   enterEmail: {
     EN: 'Enter Email',
     AR: 'أدخل البريد الإلكتروني',
-    FN: 'Entrez l\'email',
+    FN: "Entrez l'email",
   },
   mobileNo: {
     EN: 'Mobile No. *',
-    AR: 'رقم الهاتف المحمول *' ,
+    AR: 'رقم الهاتف المحمول *',
     FN: 'Numéro de portable *',
   },
   enterNumber: {
@@ -162,6 +164,102 @@ const LanguageSelected = {
     EN: 'Verify & Sign Up',
     AR: 'تحقق واشترك',
     FN: 'Vérifiez et inscrivez-vous',
+  },
+  //Home screen
+  health: {
+    EN: 'How is your health today?',
+    AR: 'كيف هي صحتك اليوم؟',
+    FN: "Comment est votre santé aujourd'hui ?",
+  },
+  date: {
+    EN: 'Friday, July 15',
+    AR: 'الجمعة، 15 يوليو',
+    FN: 'Vendredi 15 juillet',
+  },
+  upcomingAppointments: {
+    EN: 'Upcoming Appointment',
+    AR: 'الموعد القادم',
+    FN: 'Rendez-vous à venir',
+  },
+  viewAll: {
+    EN: 'View All',
+    AR: 'عرض الكل',
+    FN: 'Voir tout',
+  },
+  appointment: {
+    EN: 'Appointment',
+    AR: 'موعد',
+    FN: 'Rendez-vous',
+  },
+  specialization: {
+    EN: 'Specialization',
+    AR: 'تخصص',
+    FN: 'Spécialisation',
+  },
+  heart: {
+    EN: 'Heart',
+    AR: 'قلب',
+    FN: 'Cœur',
+  },
+  brain: {
+    EN: 'Brain',
+    AR: 'دماغ',
+    FN: 'Cerveau',
+  },
+  lungs: {
+    EN: 'Lungs',
+    AR: 'رئتان',
+    FN: 'Poumons',
+  },
+  dentist: {
+    EN: 'Dentist',
+    AR: 'طبيب الأسنان',
+    FN: 'Dentiste',
+  },
+  general: {
+    EN: 'General',
+    AR: 'عام',
+    FN: 'Général',
+  },
+  kidney: {
+    EN: 'Kidney',
+    AR: 'كلى',
+    FN: 'Rein',
+  },
+  ear: {
+    EN: 'Ear',
+    AR: 'أُذُن',
+    FN: 'Oreille',
+  },
+  myAppointment: {
+    EN: 'My Appointments',
+    AR: 'مواعيدي',
+    FN: 'Mes Rendez-vous',
+  },
+  upcoming: {
+    EN: 'Upcoming',
+    AR: 'القادم',
+    FN: 'À venir',
+  },
+  completed: {
+    EN: 'Completed',
+    AR: 'مُكتَمِل',
+    FN: 'Terminé',
+  },
+  cancelled: {
+    EN: 'Cancelled',
+    AR: 'ملغى',
+    FN: 'Annulé',
+  },
+  cancel: {
+    EN: 'Cancel',
+    AR: 'إلغاء',
+    FN: 'Annuler',
+  },
+  reschedule: {
+    EN: 'Reschedule',
+    AR: 'إعادة الجدولة',
+    FN: 'Reprogrammer',
   },
 };
 

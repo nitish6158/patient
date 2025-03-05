@@ -9,6 +9,7 @@ import MobileVerification from '../screens/OtpVerification/MobileVerification';
 import ForgotPassword from '../screens/ForgotPassword/ForgotPassword';
 import MyAppointment from '../screens/MyAppointment/MyAppointment';
 import Language from '../screens/Language/Language';
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
 const Stack = createStackNavigator();
 
 const AuthStack: React.FC = () => {
@@ -38,6 +39,11 @@ const AuthStack: React.FC = () => {
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
