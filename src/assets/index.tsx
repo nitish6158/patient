@@ -33,4 +33,5 @@ export const IMAGES = {
      unfocusedcalendar: require('../assets/icon/unfocusedcalendar.png'),
      greyArrow: require('../assets/icon/greyArrow.png'),
      blueArrow: require('../assets/icon/blueArrow.png'),
+     message: require('../assets/icon/image51.png'),
 }  

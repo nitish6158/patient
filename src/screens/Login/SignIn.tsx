@@ -20,7 +20,7 @@ import CongratulationScreen from '../CongratulationScreen/Congratulation';
 import AuthStore from '../../zustand/store/AuthStore';
 import LanguageSelected from '../../utils/LanguageSelected';
 const SignIn: React.FC<LoginInterface> = props => {
-  const { language } = AuthStore();
+  const {language} = AuthStore();
   const languageKey = language as keyof typeof LanguageSelected.Medicine;
 
   const styles = LoginStyle();
@@ -30,7 +30,9 @@ const SignIn: React.FC<LoginInterface> = props => {
 
   const handleSignIn = () => {
     // Handle sign in logic here
-    setShow(true);
+    // setShow(true);
+    props.navigation.navigate('MyAppointment');
+
   };
 
   const handleSkipLogin = () => {
@@ -41,30 +43,46 @@ const SignIn: React.FC<LoginInterface> = props => {
     <ImageBackground source={IMAGES.backgroundLogin} style={styles.mainView}>
       <View style={styles.container1}>
         <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
-          <Text style={styles.logintext}>{LanguageSelected.loginToYourAccount[languageKey]}</Text>
+          <Text style={styles.logintext}>
+            {LanguageSelected.loginToYourAccount[languageKey]}
+          </Text>
           <View style={styles.regiterView}>
-            <Text style={styles.textregister1}>{LanguageSelected.newToMedicineApp[languageKey]}</Text>
+            <Text style={styles.textregister1}>
+              {LanguageSelected.newToMedicineApp[languageKey]}
+            </Text>
             <TouchableOpacity
               onPress={() => props.navigation.navigate('Signup')}>
-              <Text style={styles.textregiter}>{LanguageSelected.register[languageKey]}</Text>
+              <Text style={styles.textregiter}>
+                {LanguageSelected.register[languageKey]}
+              </Text>
             </TouchableOpacity>
           </View>
-          <Text style={styles.logintitle}>{LanguageSelected.userName[languageKey]}</Text>
+          <Text style={styles.logintitle}>
+            {LanguageSelected.userName[languageKey]}
+          </Text>
           <CustomTextInput
             icon={[IMAGES.focusedprofile, IMAGES.unfocusedprofile]}
             containerStyle={styles.inputStyle}
             placeholder={LanguageSelected.enterUserName[languageKey]}
           />
-          <Text style={styles.logintitle}>{LanguageSelected.password[languageKey]}</Text>
+          <Text style={styles.logintitle}>
+            {LanguageSelected.password[languageKey]}
+          </Text>
           <CustomTextInput
             icon={[IMAGES.focusedLock, IMAGES.unfocusedlock]}
             containerStyle={styles.inputStyle}
             placeholder={LanguageSelected.enterPassword[languageKey]}
           />
-          <TouchableOpacity onPress={() => props.navigation.navigate('ForgotPassword')}>
-          <Text style={styles.forgottitle}>{LanguageSelected.forgetPassword[languageKey]}</Text>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('ForgotPassword')}>
+            <Text style={styles.forgottitle}>
+              {LanguageSelected.forgetPassword[languageKey]}
+            </Text>
           </TouchableOpacity>
-          <AppButton title={LanguageSelected.login[languageKey]} onPress={handleSignIn} />
+          <AppButton
+            title={LanguageSelected.login[languageKey]}
+            onPress={handleSignIn}
+          />
           <AppButton
             title={LanguageSelected.skipLogin[languageKey]}
             onPress={handleSkipLogin}
@@ -73,7 +91,11 @@ const SignIn: React.FC<LoginInterface> = props => {
           />
         </KeyboardAwareScrollView>
       </View>
-      {show && <CongratulationScreen text={LanguageSelected.loginSuccessful[languageKey]} />}
+      {show && (
+        <CongratulationScreen
+          text={LanguageSelected.loginSuccessful[languageKey]}
+        />
+      )}
     </ImageBackground>
   );
 };
