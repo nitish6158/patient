@@ -11,6 +11,8 @@ import MyAppointment from '../screens/MyAppointment/MyAppointment';
 import Language from '../screens/Language/Language';
 import SearchDoctor from '../screens/SearchDoctor/SearchDoctor';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import MyChat from '../screens/MyChat/MyChat';
+import MyPrescription from '../screens/MyPrescription/MyPrescription';
 const Stack = createStackNavigator();
 
 const AuthStack: React.FC = () => {
@@ -50,6 +52,16 @@ const AuthStack: React.FC = () => {
       <Stack.Screen
         name="MyAppointment"
         component={MyAppointment}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="MyPrescription"
+        component={MyPrescription}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="MyChat"
+        component={MyChat}
         options={{headerShown: false}}
       />
       <Stack.Screen

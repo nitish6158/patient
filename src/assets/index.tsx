@@ -23,6 +23,11 @@ export const IMAGES = {
   DoctorProfile: require('../assets/images/DoctorPhoto.png'),
   doctorImg: require('../assets/images/Rectangle5652.png'),
   bg: require('../assets/images/Bg.png'),
+  docProfile1: require('../assets/images/profile1.png'),
+  docProfile2: require('../assets/images/profile2.png'),
+  docProfile3: require('../assets/images/profile3.png'),
+  docProfile4: require('../assets/images/profile4.png'),
+  docProfile5: require('../assets/images/profile5.png'),
 
   /*...icon......*/
   blueRight: require('../assets/icon/blueRight.png'),
@@ -55,16 +60,13 @@ export const IMAGES = {
   messageTxt: require('../assets/icon/message-text.png'),
   vector: require('../assets/icon/Vector.png'),
   whitebackArrow: require('../assets/icon/whitebackArrow.png'),
-
   filterIcon: require('../assets/icon/filter.png'),
-
   searchIcon: require('../assets/icon/search.png'),
-
   doctorIcon: require('../assets/icon/doctorIcon.png'),
-
   specializationIcon: require('../assets/icon/specializationIcon.png'),
-
   clinicIcon: require('../assets/icon/clinicIcon.png'),
-
   StarIcon: require('../assets/icon/Star.png'),
+  pdfIcon: require('../assets/icon/Group1437252804.png'),
+  downloadIcon: require('../assets/icon/Group1437252805.png'),
+  calendarIcon: require('../assets/icon/calendar(2)1.png'),
 };

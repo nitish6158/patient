@@ -51,9 +51,6 @@ const HomeScreen: React.FC<HomeScreenInterface> = props => {
   ];
 
   const renderUpcomingAppointments = ({item}: {item: any}) => (
-    // <TouchableOpacity
-    //         // onPress={props.navigation.navigate('MyAppointment')}
-    //         ></TouchableOpacity>
     <TouchableOpacity
       style={styles.eventContainer}
       onPress={() => props.navigation.navigate('MyAppointment')}>
@@ -100,15 +97,24 @@ const HomeScreen: React.FC<HomeScreenInterface> = props => {
       <ScrollView>
         <View style={styles.header}>
           <View style={styles.leftView}>
-            <Image
-              source={IMAGES.profile}
-              style={styles.leftImg}
-              resizeMode="contain"
-            />
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('SearchDoctor')}>
+              <Image
+                source={IMAGES.profile}
+                style={styles.leftImg}
+                resizeMode="contain"
+              />
+            </TouchableOpacity>
           </View>
           <View style={styles.rightView}>
-            <Image source={IMAGES.wallet} style={styles.rightImg} />
-            <Image source={IMAGES.bell} style={styles.rightImg} />
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('MyChat')}>
+              <Image source={IMAGES.wallet} style={styles.rightImg} />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('MyPrescription')}>
+              <Image source={IMAGES.bell} style={styles.rightImg} />
+            </TouchableOpacity>
             <View style={styles.dropdown}>
               <Image source={IMAGES.flag} style={styles.dropdownImg} />
               {/* <Image source={IMAGES.dropdown} style={styles.rightImg} /> */}

@@ -1,4 +1,5 @@
 import MyAppointment from '../screens/MyAppointment/MyAppointment';
+import MyPrescription from '../screens/MyPrescription/MyPrescription';
 
 const LanguageSelected = {
   // Login screen text
@@ -260,6 +261,16 @@ const LanguageSelected = {
     EN: 'Reschedule',
     AR: 'إعادة الجدولة',
     FN: 'Reprogrammer',
+  },
+  myChat: {
+    EN: 'My Chat',
+    AR: 'محادثتي',
+    FN: 'Mon Chat',
+  },
+  myPrescription: {
+    EN: 'My Prescription',
+    AR: 'وصفتي الطبية',
+    FN: 'Mon Ordonnance',
   },
 };
 
