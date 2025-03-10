@@ -8,9 +8,7 @@ import Signup from '../screens/SignUp/Signup';
 import MobileVerification from '../screens/OtpVerification/MobileVerification';
 import ForgotPassword from '../screens/ForgotPassword/ForgotPassword';
 import Language from '../screens/Language/Language';
-import SearchDoctor from '../screens/SearchDoctor/SearchDoctor';
-import ClinicDetail from '../screens/ClinicDetail/ClinicDetail';
-import DoctorDetail from '../screens/DoctorDetail/DoctorDetail';
+
 import BottomTab from './BottomTab';
 const Stack = createStackNavigator();
 
