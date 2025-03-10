@@ -13,7 +13,7 @@ import {
 import {IMAGES} from '../../assets';
 import styles from './SearchDoctorStyle';
 import {SearchDoctorInterface} from './SearchDoctorInterface';
-const SearchDoctor: React.FC<SearchDoctorInterface> = () => {
+const SearchDoctor: React.FC<SearchDoctorInterface> = (props) => {
   const [selectedCategory, setSelectedCategory] = useState('Doctor');
 
   const categories = [
@@ -102,24 +102,26 @@ const SearchDoctor: React.FC<SearchDoctorInterface> = () => {
     };
   }) => (
     <View style={styles.doctorCard}>
-      <View style={styles.doctorInfo}>
-        <Image source={item.image} style={styles.doctorImage} />
-        <View style={styles.doctorDetails}>
-          <Text style={styles.doctorName}>{item.name}</Text>
-          <View style={styles.ratingContainer}>
-            <Image
-              resizeMode="contain"
-              source={IMAGES.StarIcon}
-              style={styles.starIcon}
-            />
-            <Text style={styles.ratingText}>{item.rating}</Text>
-            <Text style={styles.ratingText}> (400 reviwer)</Text>
-          </View>
-          <View style={styles.statusContainer}>
-            <Text style={styles.statusText}>{item.status}</Text>
+      <TouchableOpacity onPress={()=>props.navigation.navigate('DoctorDetail')}>
+        <View style={styles.doctorInfo}>
+          <Image source={item.image} style={styles.doctorImage} />
+          <View style={styles.doctorDetails}>
+            <Text style={styles.doctorName}>{item.name}</Text>
+            <View style={styles.ratingContainer}>
+              <Image
+                resizeMode="contain"
+                source={IMAGES.StarIcon}
+                style={styles.starIcon}
+              />
+              <Text style={styles.ratingText}>{item.rating}</Text>
+              <Text style={styles.ratingText}> (400 reviwer)</Text>
+            </View>
+            <View style={styles.statusContainer}>
+              <Text style={styles.statusText}>{item.status}</Text>
+            </View>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {item.specializations.map((specialization, index) => (
           <View key={index} style={styles.specializationContainer}>

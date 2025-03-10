@@ -1,6 +1,3 @@
-import MyAppointment from '../screens/MyAppointment/MyAppointment';
-import MyPrescription from '../screens/MyPrescription/MyPrescription';
-
 const LanguageSelected = {
   // Login screen text
   login: {
@@ -271,6 +268,96 @@ const LanguageSelected = {
     EN: 'My Prescription',
     AR: 'وصفتي الطبية',
     FN: 'Mon Ordonnance',
+  },
+  clinicDetail: {
+    EN: 'Clinic Detail',
+    AR: 'تفاصيل العيادة',
+    FN: 'Détail de la clinique',
+  },
+  aboutClinic: {
+    EN: 'About Clinic',
+    AR: 'عن العيادة',
+    FN: 'À propos de la clinique',
+  },
+  address: {
+    EN: 'Address',
+    AR: 'عنوان',
+    FN: 'Adresse',
+  },
+  clinicDoctor: {
+    EN: 'Clinic Doctor',
+    AR: 'طبيب العيادة',
+    FN: 'Médecin de clinique',
+  },
+  certified: {
+    EN: 'Certified',
+    AR: 'معتمد',
+    FN: 'Certifié',
+  },
+  experience: {
+    EN: 'Experience',
+    AR: 'تجربة',
+    FN: 'Expérience',
+  },
+  rating: {
+    EN: 'Rating',
+    AR: 'التقييم',
+    FN: 'Évaluation',
+  },
+  doctorDetail: {
+    EN: 'Doctor Detail',
+    AR: 'تفاصيل الطبيب',
+    FN: 'Détail du médecin',
+  },
+  fees: {
+    EN: 'Fees',
+    AR: 'رسوم',
+    FN: 'Frais',
+  },
+  patients: {
+    EN: 'Patients',
+    AR: 'المرضى',
+    FN: 'Patients',
+  },
+  reviews: {
+    EN: 'Reviews',
+    AR: 'المراجعات',
+    FN: 'Avis',
+  },
+  aboutMe: {
+    EN: 'About Me',
+    AR: 'عني',
+    FN: 'À propos de moi',
+  },
+  locations: {
+    EN: 'Locations',
+    AR: 'المواقع',
+    FN: 'Lieux',
+  },
+  languages: {
+    EN: 'Languages',
+    AR: 'اللغات',
+    FN: 'Langues',
+  },
+  reviewsAndRatings: {
+    EN: 'Reviews And Ratings',
+    AR: 'المراجعات والتقييمات',
+    FN: 'Avis et Évaluations',
+  },
+  viewMore: {
+    EN: 'View More',
+    AR: 'عرض المزيد',
+    FN: 'Voir plus',
+  },
+  online: {
+    EN: 'Online',
+    AR: 'عبر الإنترنت',
+    FN: 'En ligne',
+  },
+  offline: {
+    EN: 'Offline',
+    AR: 'غير متصل',
+    FN: 'Hors ligne',
   },
 };
 
