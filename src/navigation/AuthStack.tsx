@@ -65,16 +65,7 @@ const AuthStack: React.FC = () => {
         component={BottomTab}
         options={{headerShown: false}}
       />
-     <Stack.Screen
-        name="ClinicDetail"
-        component={ClinicDetail}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="DoctorDetail"
-        component={DoctorDetail}
-        options={{headerShown: false}}
-      />
+   
     </Stack.Navigator>
   );
 };

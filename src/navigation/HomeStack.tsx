@@ -11,7 +11,6 @@ const HomeStack: React.FC = () => {
         component={HomeScreen}
         options={{headerShown: false}}
       />
-\
     </Stack.Navigator>
   );
 };

@@ -53,7 +53,7 @@ const HomeScreen: React.FC<HomeScreenInterface> = props => {
   const renderUpcomingAppointments = ({item}: {item: any}) => (
     <TouchableOpacity
       style={styles.eventContainer}
-      onPress={() => props.navigation.navigate('MyAppointment')}>
+      onPress={() => props.navigation.navigate('Appointment')}>
       <ImageBackground source={IMAGES.vector} resizeMode="cover">
         <View style={styles.top}>
           <Text style={styles.topText}>

@@ -11,7 +11,7 @@ const ChatStack: React.FC = () => {
         component={MyChat}
         options={{headerShown: false}}
       />
-\
+
     </Stack.Navigator>
   );
 };

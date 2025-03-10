@@ -11,7 +11,7 @@ const PrescriptionStack: React.FC = () => {
         component={MyPrescription}
         options={{headerShown: false}}
       />
-\
+
     </Stack.Navigator>
   );
 };

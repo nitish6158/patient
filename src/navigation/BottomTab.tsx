@@ -1,13 +1,10 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeStack from './HomeStack';
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import MyAppointment from '../screens/MyAppointment/MyAppointment';
 import SearchDoctor from '../screens/SearchDoctor/SearchDoctor';
 import AppointmentStack from './AppointmentStack';
 import PrescriptionStack from './PrescriptionStack';
-import MyPrescription from '../screens/MyPrescription/MyPrescription';
-import MyChat from '../screens/MyChat/MyChat';
+import SearchStack from './SearchStack';
 import {Image, Platform, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {IMAGES} from '../assets';
 import {
@@ -71,11 +68,11 @@ const BottomTab = () => {
         tabBarActiveTintColor: 'red',
         tabBarInactiveTintColor: 'green',
       })}>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Appointment" component={MyAppointment} />
-      <Tab.Screen name="Search" component={SearchDoctor} />
-      <Tab.Screen name="Prescription" component={MyPrescription} />
-      <Tab.Screen name="Chat" component={MyChat} />
+      <Tab.Screen name="Home" component={HomeStack} />
+      <Tab.Screen name="Appointment" component={AppointmentStack} />
+      <Tab.Screen name="Search" component={SearchStack} />
+      <Tab.Screen name="Prescription" component={PrescriptionStack} />
+      <Tab.Screen name="Chat" component={ChatStack} />
     </Tab.Navigator>
   );
 };

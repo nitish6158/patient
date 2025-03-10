@@ -11,7 +11,7 @@ const AppointmentStack: React.FC = () => {
         component={MyAppointment}
         options={{headerShown: false}}
       />
-\
+
     </Stack.Navigator>
   );
 };
