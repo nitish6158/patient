@@ -20,21 +20,34 @@ import {format} from 'date-fns';
 import CongratulationScreen from '../CongratulationScreen/Congratulation';
 import LanguageSelected from '../../utils/LanguageSelected';
 import AuthStore from '../../zustand/store/AuthStore';
-const Signup :React.FC<SignupInterface>= props => {
-  const {language} = AuthStore();
-  const languageKey =
-  language as keyof typeof LanguageSelected.Medicine;
+const Signup: React.FC<SignupInterface> = props => {
+  const {language, AddSignUpData} = AuthStore();
+  const languageKey = language as keyof typeof LanguageSelected.Medicine;
   const styles = SignupStyle();
+  const [userName, setUsername] = useState('');
   const [email, setEmail] = useState('');
+  const [mobileNo, setMobileNo] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [selectedGender, setSelectedGender] = useState<string | null>(null);
   const [dob, setDOB] = useState(new Date());
   const [showDate, setShowDate] = useState(false);
   const [show, setShow] = useState(false);
 
   const handleSignIn = () => {
-    // Handle sign in logic here
-    props.navigation.navigate('MobileVerification');
+    const data = {
+      password: password,
+      fullName: userName,
+      email: email,
+      mobileNo: mobileNo,
+      gender: selectedGender,
+      dateOfBirth: dob ? format(dob, 'dd/MM/yyyy') : 'dd/MM/YYYY',
+    };
+    AddSignUpData(data);
+    setTimeout(() => {
+      props.navigation.navigate('MobileVerification');
+    }, 100);
+   
   };
   useEffect(() => {
     if (show) {
@@ -61,7 +74,6 @@ const Signup :React.FC<SignupInterface>= props => {
           </Text>
           <View style={styles.regiterView}>
             <Text style={styles.textregister1}>
-           
               {LanguageSelected.alreadyHaveAnAccount[languageKey]}
             </Text>
             <TouchableOpacity onPress={handleSkipLogin}>
@@ -77,6 +89,7 @@ const Signup :React.FC<SignupInterface>= props => {
             icon={[IMAGES.focusedprofile, IMAGES.unfocusedprofile]}
             containerStyle={styles.inputStyle}
             placeholder={LanguageSelected.enterUserName[languageKey]}
+            onChangeText={text => setUsername(text)}
           />
           <Text style={styles.logintitle}>
             {LanguageSelected.email[languageKey]}
@@ -86,6 +99,7 @@ const Signup :React.FC<SignupInterface>= props => {
             containerStyle={styles.inputStyle}
             placeholder={LanguageSelected.enterEmail[languageKey]}
             keyboardType="email-address"
+            onChangeText={text => setEmail(text)}
           />
           <Text style={styles.logintitle}>
             {LanguageSelected.mobileNo[languageKey]}
@@ -95,6 +109,7 @@ const Signup :React.FC<SignupInterface>= props => {
             containerStyle={styles.inputStyle}
             placeholder={LanguageSelected.enterNumber[languageKey]}
             keyboardType="number-pad"
+            onChangeText={text => setMobileNo(text)}
           />
           <Text style={styles.logintitle}>
             {LanguageSelected.dateOfBirth[languageKey]}
@@ -112,6 +127,7 @@ const Signup :React.FC<SignupInterface>= props => {
             icon={[IMAGES.focusedLock, IMAGES.unfocusedlock]}
             containerStyle={styles.inputStyle}
             placeholder={LanguageSelected.enterPassword[languageKey]}
+            onChangeText={text => setPassword(text)}
           />
           <Text style={styles.logintitle}>
             {LanguageSelected.confirmPassword[languageKey]}
@@ -120,6 +136,7 @@ const Signup :React.FC<SignupInterface>= props => {
             icon={[IMAGES.focusedLock, IMAGES.unfocusedlock]}
             containerStyle={styles.inputStyle}
             placeholder={LanguageSelected.enterConfirmPassword[languageKey]}
+            onChangeText={text => setConfirmPassword(text)}
           />
           <Text style={styles.logintitle}>
             {LanguageSelected.selectGender[languageKey]}

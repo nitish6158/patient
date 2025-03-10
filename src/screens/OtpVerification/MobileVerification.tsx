@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {
   View,
   TextInput,
@@ -19,9 +19,9 @@ import CountdownTimer from '../../Component/CountdownTimer';
 import AuthStore from '../../zustand/store/AuthStore';
 import LanguageSelected from '../../utils/LanguageSelected';
 const MobileVerification: React.FC<OtpVerificationInterface> = props => {
-  const {language} = AuthStore();
-  const languageKey =
-  language as keyof typeof LanguageSelected.Medicine;
+  const {language, signUpData, sentNumberOtp} = AuthStore();
+  console.log('signup', signUpData);
+  const languageKey = language as keyof typeof LanguageSelected.Medicine;
   const styles = MobileVerificationStyle();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -35,6 +35,11 @@ const MobileVerification: React.FC<OtpVerificationInterface> = props => {
     // Handle sign in logic here
     setShow(true);
   };
+  useEffect(()=>{
+    if(signUpData.mobileNo){
+    sentNumberOtp(signUpData.mobileNo)
+    }
+  },[])
   const handleChange = (text: string, index: number) => {
     const newOtp = [...otp];
     newOtp[index] = text;
@@ -71,12 +76,10 @@ const MobileVerification: React.FC<OtpVerificationInterface> = props => {
         <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
           <Text style={styles.logintext}>
             {LanguageSelected.otpVerification[languageKey]}
-
           </Text>
           <View style={styles.regiterView}>
             <Text style={styles.textregister1}>
               {LanguageSelected.enterOtpCode[languageKey]}
-
             </Text>
           </View>
           <Text style={styles.textregister1}>9045678901</Text>
@@ -102,8 +105,7 @@ const MobileVerification: React.FC<OtpVerificationInterface> = props => {
           />
           <View style={styles.regiterView}>
             <Text style={styles.textregister1}>
-             {LanguageSelected.alreadyHaveAnAccount[languageKey]}
-
+              {LanguageSelected.alreadyHaveAnAccount[languageKey]}
             </Text>
             <TouchableOpacity
               onPress={() => props.navigation.navigate('Signup')}>
@@ -112,7 +114,10 @@ const MobileVerification: React.FC<OtpVerificationInterface> = props => {
               </Text>
             </TouchableOpacity>
           </View>
-          <AppButton title={LanguageSelected.verifyAndSignUp[languageKey]} onPress={handleSignIn} />
+          <AppButton
+            title={LanguageSelected.verifyAndSignUp[languageKey]}
+            onPress={handleSignIn}
+          />
         </KeyboardAwareScrollView>
       </View>
       {show && <CongratulationScreen text={'SignUp Successful'} />}

@@ -94,7 +94,7 @@ const HomeScreen: React.FC<HomeScreenInterface> = props => {
 
   return (
     <View style={styles.mainContainer}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.leftView}>
             <TouchableOpacity
@@ -165,7 +165,7 @@ const HomeScreen: React.FC<HomeScreenInterface> = props => {
             </Text>
           </TouchableOpacity>
         </View>
-        <ScrollView>
+        <View>
           <View style={styles.speContainer}>
             <View style={styles.subContainer}>
               <View style={styles.container}>
@@ -260,7 +260,7 @@ const HomeScreen: React.FC<HomeScreenInterface> = props => {
               </View>
             </View>
           </View>
-        </ScrollView>
+        </View>
       </ScrollView>
     </View>
   );

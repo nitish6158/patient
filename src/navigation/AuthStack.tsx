@@ -7,12 +7,11 @@ import Login from '../screens/Login/Login';
 import Signup from '../screens/SignUp/Signup';
 import MobileVerification from '../screens/OtpVerification/MobileVerification';
 import ForgotPassword from '../screens/ForgotPassword/ForgotPassword';
-import MyAppointment from '../screens/MyAppointment/MyAppointment';
 import Language from '../screens/Language/Language';
 import SearchDoctor from '../screens/SearchDoctor/SearchDoctor';
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import MyChat from '../screens/MyChat/MyChat';
-import MyPrescription from '../screens/MyPrescription/MyPrescription';
+import ClinicDetail from '../screens/ClinicDetail/ClinicDetail';
+import DoctorDetail from '../screens/DoctorDetail/DoctorDetail';
+import BottomTab from './BottomTab';
 const Stack = createStackNavigator();
 
 const AuthStack: React.FC = () => {
@@ -44,29 +43,15 @@ const AuthStack: React.FC = () => {
         component={Login}
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="HomeScreen"
-        component={HomeScreen}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="MyAppointment"
-        component={MyAppointment}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="MyPrescription"
-        component={MyPrescription}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="MyChat"
-        component={MyChat}
-        options={{headerShown: false}}
-      />
+
       <Stack.Screen
         name="Signup"
         component={Signup}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPassword}
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -74,9 +59,20 @@ const AuthStack: React.FC = () => {
         component={MobileVerification}
         options={{headerShown: false}}
       />
+
       <Stack.Screen
-        name="SearchDoctor"
-        component={SearchDoctor}
+        name="HomeScreen"
+        component={BottomTab}
+        options={{headerShown: false}}
+      />
+     <Stack.Screen
+        name="ClinicDetail"
+        component={ClinicDetail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="DoctorDetail"
+        component={DoctorDetail}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

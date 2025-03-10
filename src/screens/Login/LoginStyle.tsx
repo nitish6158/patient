@@ -52,7 +52,6 @@ const LoginStyle = () => {
     inputStyle: {
       borderRadius: radiusScale(10),
       marginVertical: verticalMarginScale(5),
-      paddingVertical: verticalScale(10),
     },
     logintext: {
       color: Colors.fontColor,

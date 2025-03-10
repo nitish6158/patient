@@ -1,18 +1,20 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
-import { getUserById, createUser, updateUser, deleteUser } from '../api/AuthApiServices';
+import { sentOtp, createUser, updateUser, deleteUser } from '../api/AuthApiServices';
 // User State Interface
 interface UserState {
     language:string;
   user: any | null;                  // Store user data
   loading: boolean;                  // Loading state
-  error: string | null;              // Error message
-  fetchUser: (id: number) => void;   // Function to fetch user by ID
+  error: string | null;   
+  signUpData:any;           // Error message
+  sentNumberOtp: (mobileNo: string) => void;   // Function to fetch user by ID
   addUser: (data: object) => void;   // Function to create a new user
   editUser: (id: number, data: object) => void; // Function to update user
   removeUser: (id: number) => void;  // Function to delete a user
   clearUser: () => void;   
   addlanguage:(data:string)=>void;          // Clear user data
+  AddSignUpData:(data:any)=>void;          // Clear user data
 }
 
 // Zustand Store with API Logic
@@ -23,16 +25,19 @@ const AuthStore = create<UserState>()(
     error: null,
     language:"EN",
     // Fetch User by ID
-    fetchUser: async (id: number) => {
+    sentNumberOtp: async (mobileNo: string) => {
       set({ loading: true, error: null });
       try {
-        const userData = await getUserById(id);
+        const userData = await sentOtp(mobileNo);
         set({ user: userData, loading: false });
       } catch (error) {
         set({ error: 'Failed to fetch user', loading: false });
       }
     },
-
+    AddSignUpData: async (data: any) => {
+        set({ signUpData: data });
+        
+      },
     // Create User
     addlanguage: async (data: string) => {
       set({ language: data });

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Axios Instance for API Calls
 const api = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com', // Your base URL
+  baseURL: 'http://192.168.0.163:8004/api/v1/user/patient/', // Your base URL
   timeout: 10000, // Request timeout (10 seconds)
   headers: {
     'Content-Type': 'application/json',
@@ -10,9 +10,9 @@ const api = axios.create({
 });
 
 // API: Get User by ID
-export const getUserById = async (id: number) => {
+export const sentOtp = async (mobileNo: string) => {
   try {
-    const response = await api.get(`/users/${id}`);
+    const response = await api.post(`sendMobileOtp?mobileNo=${mobileNo}`);
     return response.data;
   } catch (error) {
     throw new Error('Error fetching user');
